@@ -14,6 +14,14 @@ cd Occluded-Dataset-with-Color-Augmentation
 pip install -r requirements.txt
 ```
 
+###### Downloading testing occluders from [OccludedPASCAL3D+](https://github.com/Angtian/OccludedPASCAL3D)
+
+```shell
+chmod +x download_occluder_lib.sh
+./download_occluder_lib.sh
+
+```
+
 ### Augmentation
 
 ```shell
@@ -25,15 +33,25 @@ python CreateOccludedDatasetWithColorAugmentation.py --input_image_dir test --ou
 - prepare your dataset as follow (e.g. "test" in this repo):
 
 > .
+> 
 > ├── Annotations
+> 
 > │   └── class1
+> 
 > │       └── 000000000283.txt
+> 
 > ├── Images
+> 
 > │   └── class1
+> 
 > │       └── 000000000283.jpg
+> 
 > ├── Image_sets
+> 
 > │   └── class1_val.txt
+> 
 > └── obj_mask
+> 
 >  └── class1
 
 - change class name in "CreateOccludedDatasetWithColorAugmentation.py"
